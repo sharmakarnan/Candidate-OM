@@ -2,11 +2,13 @@
   "name": "cms-fe",
   "private": true,
   "version": "0.0.0",
+  "homepage":"https://github.com/sharmakarnan/Candidate-OM",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
 
   },
