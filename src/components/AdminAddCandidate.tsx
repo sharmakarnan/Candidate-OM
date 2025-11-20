@@ -29,7 +29,7 @@ const AdminAddCandidate: React.FC = () => {
     e.preventDefault();
     setMessage(null);
     try {
-      await api.post("/admin/add", form);
+      await api.post("/api/admin/add", form);
       setIsSuccess(true);
       setMessage("✅ Candidate added successfully! Email sent to candidate.");
       setForm({
