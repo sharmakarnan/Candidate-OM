@@ -30,7 +30,7 @@ const AdminViewCandidates: React.FC = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const res = await api.get("/admin/registered");
+        const res = await api.get("/api/admin/registered");
         setCandidates(res.data);
       } catch (err) {
         console.error("❌ Error fetching candidates:", err);

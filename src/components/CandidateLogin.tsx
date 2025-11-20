@@ -20,7 +20,7 @@ const CandidateLogin: React.FC<CandidateLoginProps> = ({ onLoginSuccess }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await api.post("/candidate/login", { email, password });
+      const res = await api.post("/api/candidate/login", { email, password });
       alert("✅ Login Successful!");
       onLoginSuccess(res.data.candidate);
       navigate("/candidate/register");

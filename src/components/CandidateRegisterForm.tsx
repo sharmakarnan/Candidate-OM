@@ -50,7 +50,7 @@ const CandidateRegisterForm: React.FC<CandidateRegisterFormProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await api.post("/candidate/register-details", form);
+      await api.post("/api/candidate/register-details", form);
       alert("✅ Registration completed successfully!");
       navigate("/candidate/start-test"); // redirect to instruction page
     } catch (err) {

@@ -15,7 +15,7 @@ const CandidateStartTest: React.FC<CandidateStartTestProps> = ({ candidate }) =>
 
   const handleStartTest = async () => {
     try {
-      const res = await api.post("/tests/start", { candidate_id: candidate.id });
+      const res = await api.post("/api/tests/start", { candidate_id: candidate.id });
 
       if (res.data?.questions && res.data?.test_id) {
         const test_id = res.data.test_id;

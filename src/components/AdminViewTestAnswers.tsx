@@ -16,7 +16,7 @@ export default function AdminViewTestAnswers() {
   const [answers, setAnswers] = useState<TestAnswer[]>([]);
 
   useEffect(() => {
-    api.get(`/tests/answers/${testId}`)
+    api.get(`/api/tests/answers/${testId}`)
       .then(res => setAnswers(res.data))
       .catch(err => console.log(err));
   }, [testId]);
