@@ -87,7 +87,7 @@ export default function Results() {
   const [minScore, setMinScore] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/tests/results")
+    fetch("/api/tests/results")
       .then((res) => res.json())
       .then(setResults);
   }, []);

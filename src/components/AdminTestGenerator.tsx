@@ -29,7 +29,7 @@ const AdminTestGenerator: React.FC = () => {
   // ⭐ Load total questions + category count safely
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/questions/count")
+      .get("/api/questions/count")
       .then((res) => setStats(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -45,7 +45,7 @@ const AdminTestGenerator: React.FC = () => {
     };
 
     const res = await axios.post(
-      "http://localhost:5000/api/questions/generate-test",
+      "/api/questions/generate-test",
       body
     );
 

@@ -20,7 +20,7 @@ const AdminOnboarding: React.FC = () => {
     const fetchPassedCandidates = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:5000/api/onboarding/selected");
+        const res = await axios.get("/api/onboarding/selected");
         setCandidates(res.data);
       } catch (err) {
         console.error("❌ Error fetching passed candidates:", err);
@@ -38,7 +38,7 @@ const AdminOnboarding: React.FC = () => {
 
     try {
       setSending(candidate.candidate_id);
-      const res = await axios.post("http://localhost:5000/api/onboarding/send-email", {
+      const res = await axios.post("/api/onboarding/send-email", {
         email: candidate.email,
         username: candidate.name,
       });

@@ -25,7 +25,7 @@ const AdminQuestions: React.FC = () => {
 
   // Load All Questions
   const fetchQuestions = async () => {
-    const res = await axios.get("http://localhost:5000/api/questions/view");
+    const res = await axios.get("/api/questions/view");
     setQuestions(res.data);
   };
 
@@ -57,7 +57,7 @@ const AdminQuestions: React.FC = () => {
       return;
     }
 
-    await axios.post("http://localhost:5000/api/questions/add", newQuestion);
+    await axios.post("/api/questions/add", newQuestion);
 
     alert("✅ Question Added");
 
@@ -77,7 +77,7 @@ const AdminQuestions: React.FC = () => {
   const handleDelete = async (id: number) => {
     if (!window.confirm("Delete this question?")) return;
 
-    await axios.delete(`http://localhost:5000/api/questions/delete/${id}`);
+    await axios.delete(`/api/questions/delete/${id}`);
     fetchQuestions();
   };
 

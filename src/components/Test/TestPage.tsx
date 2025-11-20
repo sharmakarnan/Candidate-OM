@@ -230,7 +230,7 @@ export default function TestPage() {
     const activeTest = JSON.parse(localStorage.getItem("activeTest") || "null");
     if (!activeTest) return;
 
-    await fetch("http://localhost:5000/api/tests/submit", {
+    await fetch("/api/tests/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ test_id: activeTest.test_id, answers }),
