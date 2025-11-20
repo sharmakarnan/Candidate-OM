@@ -69,6 +69,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import baseURL from "../../services/api"
 
 type TestResult = {
   test_id: number;
@@ -87,7 +88,7 @@ export default function Results() {
   const [minScore, setMinScore] = useState("");
 
   useEffect(() => {
-    fetch("/api/tests/results")
+    fetch(`${baseURL}/api/tests/results`)
       .then((res) => res.json())
       .then(setResults);
   }, []);

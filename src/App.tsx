@@ -37,7 +37,7 @@ const App: React.FC = () => {
       <nav className="bg-white shadow-md border-b border-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link
-            to="/candidate-om/"
+            to="/"
             className="text-2xl font-bold text-green-700 hover:text-green-800 transition"
           >
             Office Management
@@ -86,7 +86,7 @@ const App: React.FC = () => {
         <Routes>
           {/* Default route */}
           <Route
-            path="/candidate-om/"
+            path="/"
             element={<Navigate to="/admin/add-candidate" replace />}
           />
 
